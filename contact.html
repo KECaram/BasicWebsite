@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+
+  <title>Home</title>
+
+  <link href="reset.css" rel="stylesheet" type="text/css" />
+  <link href="base.css" rel="stylesheet" type="text/css" />
+  <! -- [if IE]>
+  <link href="iefixes.css" rel="stylesheet" type="text/css">
+  <! -- [endif]>
+	  
+	<style type="text/css">
+	  
+		form {
+			margin: 0 0 0 0;
+			padding: 0;
+		}
+
+		#contactform {
+			background:rgb(0, 0, 0);
+			padding:20px;
+			width:500px;
+			border:solid #BA2B22 2px;
+ 			-webkit-border-radius:18px;
+ 			-moz-border-radius:18px;
+ 			border-radius:22px;
+		}
+
+		#contactform fieldset {
+			margin-bottom:20px;
+		}
+
+		legend {
+			color:#FFF;
+			font-size:1.5em;
+			font-weight:bold;
+			padding-bottom:10px;
+		}
+	
+		#contactform label {
+			color: #FFF;
+			float:left;
+			font-size:13px;
+			width:110px;
+			margin-right:60px;
+		}
+
+		#contactform p {
+			color: #FFF;
+		}
+
+		#contactform label[for=yes],#contactform label[for=no] {
+			float:none;
+		}
+
+	</style>	  
+
+	<script src="modernizr.custom.03287.js"></script>
+	
+	<script>
+		yepnope(
+		{
+			test:Modernizr.input.placeholder,
+			nope:'h5f.js',
+			callback:function(url, result,key) 
+			{
+			H5F.setup(document.getElementById("contactform"));
+			}
+		});
+	</script>
+</head>
+
+<body id="contact">
+
+  <div id="wrap">
+		<div id="masthead">
+				<img src="images/Headshot.jpg" width="120" height="120" alt="Anime" />      
+				<h1>MARLALA JANE ARTS</h1>
+    </div>
+
+    <div id="mainnav">     
+		<ul>	
+			<li><a class="nav-home" href="index.html">Home</a></li>                      			 
+			<li><a class="nav-about" href="about.html">About</a></li>              		
+			<li><a class="nav-gallery" href="gallery.html">Gallery</a></li>                                          
+			<li><a class="nav-news" href="news.html">News</a></li>
+			<li><a class="nav-buy" href="buy.html">Buy</a></li>
+			<li><a class="nav-find" href="find.html">Near You</a></li>            			
+			<li><a class="nav-contact" href="contact.html">Contact Us</a></li>
+		  </ul>
+    </div>
+    <!-- End mainnav Div-->
+
+    <!-- Begin innerwrap div -->
+    <div id="innerwrap">
+
+      <!-- Begin Sidebar Div sidebar.-->      
+      <div id="sidebar">
+			<img src="images/Self.jpg" width="180" height="180" alt="Anime" />
+			<h2>What's New?</h2>
+			<h3>Upcoming Projects</h3>
+			  <p>See upcoming projects and what's going on with Marla <a href = "news.html">here</a>!</p>
+			  <p>Visit her <a href="https://www.instagram.com/marlalalajanearts/?hl=en">instagram</a> page for daily updates!</p>
+			<h3>Reviews</h3>
+			  <p>"Fusing mundane objects with the abstract and surreal, MarlaJane uses a belnd of evocative colors and imperfect lines to create images that are as unnerving as they are aesthetically pleasing." - Captain P's Art Review Journal</p>
+			<h4><a href = "find.html">Find a Show Near You</a></h4>
+		  </div>
+      <!-- End Sidebar Div-->
+
+      <!-- This is the beginning of the main column -->
+	  <!-- Begin Content Div -->
+      <div id="maincontent">
+		<section id="contact">
+
+		<h1>Contact Us</h1>
+
+		<form id="contactform" action="" method="post">
+		<fieldset>
+			<legend>Personal Information</legend>
+			<label for="firstname">First name:<input id="firstname" type="text" name="firstname" placeholder="Enter Your Last Name" required autofocus autocomplete="off"></label>				<label for="lastname">Last name:<input id="lastname" type="text" name="lastname" placeholder="Enter Your Last Name" required></label>
+			<label for= "email">Email:<input id="email" type="email" name="customeremail" placeholder="Required Field" required ></label>
+		</fieldset>
+		<fieldset>
+			<legend>Additional Information</legend>
+				<p>Would you like to recieve updates about Marla's shows near you?</p>
+			<ol>
+				<li> <input name="subscribe" id="yes" type="radio"><label for="yes">Yes</label> </li>
+				<li> <input name="subscribe" id="no" type="radio"><label for="no">No</label> </li>
+			</ol>
+		</fieldset>
+			<input type="submit" value="Go">
+		</form>
+		</section>
+      </div>
+	<!-- End of contact section -->
+  </div>
+  <div id="footer"> 
+	<p>Copyright MarlaJane Caram 2020</p>
+	<p>Registration on or use of this site constitutes acceptance of our <a href="https://policies.google.com/terms?hl=en-US"> user agreement </a> and <a href="https://policies.google.com/privacy?hl=en-US">Privacy Policy.</a></p>
+  </div>
+	<!-- End of the Wrap Div-->
+</body>
+</html>

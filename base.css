@@ -1,0 +1,140 @@
+body {
+	font-family: "Trebuchet MS", Tahoma, Arial, sans-serif;
+	font-size:100%; 	
+	background-color: rgb(58, 59, 61);
+	
+}
+
+p	{
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 0.875em; 
+	line-height:1.75em;
+	
+}
+
+h1	{
+	font-size: 1.5em; 
+	line-height:1.5em;
+	font-weight: normal; 
+}
+
+h2,h3	{
+	font-size:1.125em;
+	font-weight:lighter;
+	text-transform:uppercase;
+	letter-spacing:0.2em;
+}
+
+h3	{
+	font-size:0.875em;
+	letter-spacing:0.1em;
+}
+
+ul	{
+	font-size: 0.875em;
+	list-style-position: inside;
+}
+
+ol	{
+	font-size: 0.875em; 
+}
+
+body#home .nav-home, body#about .nav-about, body#contact .nav-contact, body#gallery .nav-gallery, body#find .nav-find, body#buy .nav-buy, body#news .nav-news{
+	background-color:black;
+	color:#FFF;
+	display:block;
+}
+ #wrap { 	
+   background-color: #FFFFFF;  
+   width: 960px; 	
+   border: thin solid black; 
+   margin: 0 auto; 
+ } 
+
+ #innerwrap:after {
+	 content:".";
+	 display:block;
+	 clear:both;
+	 height: 0;
+	 visibility: hidden;
+ }
+
+ #masthead { 	
+	color: #FFF;
+	background-color: black; 
+	height: 150px;
+ } 
+
+ #mainnav { 	
+   background-color:gray;
+   height: 35px; 
+   border:1px black solid;
+ }
+
+ #mainnav li { 	
+   float: left; 
+   width: 120px; 	
+   height: 35px; 
+   background-color:gray; 	
+   text-align: center; 	
+   border-left: 1px black solid; 	
+   border-right: 1px black solid;
+   line-height: 35px;
+ }
+
+ #mainnav ul li a:hover {
+	 background-color:rgb(0, 0, 0);
+	 color: #FFF;
+	 display:block;
+ }
+
+ #sidebar { 	
+   float: left; 	
+   width: 300px;
+   height: 600px; 
+   background-repeat:repeat-x;
+   background-color:gray;
+   border-left:1px black solid;
+   border-right:1px black solid;
+ }
+
+ #maincontent {
+   position: relative; 	
+   width: 600px; 	
+   float: right; 	
+ }
+
+ #footer { 	 
+   background-image: url(images/splat_banner.png); 	 
+   background-size: 650px;
+   background-repeat: no-repeat;
+   background-position: center;
+ }
+
+ #footer p {
+   margin: 10px 0 0 20px; 	
+   width:280px;   	
+   font-family:Verdana, Geneva, sans-serif;            
+   font-size: 0.689em;
+ }
+
+ p, h1, h2, h3, h4 { 	
+   margin-bottom: 10px;	
+ }
+
+ #sidebar p, #sidebar h2, #sidebar h3, #sidebar h4, #maincontent p, #maincontent h1, #maincontent h2, #maincontent h3{ 	
+   margin-left:20px;
+   margin-right:20px;
+ }
+
+ #sidebar p {
+   margin-left:30px;
+  }
+
+ #sidebar h2  { 	
+   margin-top:10px; 
+ }
+
+#masthead {
+  text-align: center;
+}

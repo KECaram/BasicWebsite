@@ -1,0 +1,102 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+
+  <title>News</title>
+
+  <link href="reset.css" rel="stylesheet" type="text/css" />
+  <link href="base.css" rel="stylesheet" type="text/css" />
+  <! -- [if IE]>
+  <link href="iefixes.css" rel="stylesheet" type="text/css">
+  <! -- [endif]>
+  
+  <script type="text/javascript">
+    function draw() {
+    var canvas = document.getElementById('canvas');
+    if (canvas.getContext) {
+    var ctx = canvas.getContext('2d');
+
+    ctx.beginPath();
+    ctx.moveTo(0, 0);
+    ctx.lineTo(100, 100);
+    ctx.lineTo(200, 0);
+    ctx.lineTo(200, 200);
+    ctx.lineTo(100, 100);
+    ctx.lineTo(0, 200);
+    ctx.lineTo(0, 0);
+    ctx.fill();
+    }
+  }
+</script>
+  
+  <style type="text/css">
+  </style>
+
+</head>
+
+<body id="news" onload="draw();">
+
+  <div id="wrap">
+
+    <div id="masthead">
+        <img src="images/Headshot.jpg" width="120" height="120" alt="Anime" />      
+        <h1>MARLALA JANE ARTS</h1>
+    </div>
+    <!-- End of Masthead Div-->
+
+    <div id="mainnav">     
+      <ul>	
+        <li><a class="nav-home" href="index.html">Home</a></li>                      			 
+        <li><a class="nav-about" href="about.html">About</a></li>              		
+        <li><a class="nav-gallery" href="gallery.html">Gallery</a></li>                                          
+        <li><a class="nav-news" href="news.html">News</a></li>
+        <li><a class="nav-buy" href="buy.html">Buy</a></li>
+        <li><a class="nav-find" href="find.html">Near You</a></li>            			
+        <li><a class="nav-contact" href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+    <!-- End of mainnav Div-->
+
+    <div id="innerwrap">
+
+      <div id="sidebar">
+          <img src="images/Self.jpg" width="180" height="180" alt="Anime" />
+          <h2>What's New?</h2>
+          <h3>Upcoming Projects</h3>
+            <p>See upcoming projects and what's going on with Marla <a href = "news.html">here</a>!</p>
+            <p>Visit her <a href="https://www.instagram.com/marlalalajanearts/?hl=en">instagram</a> page for daily updates!</p>
+          <h3>Reviews</h3>
+            <p>"Fusing mundane objects with the abstract and surreal, MarlaJane uses a belnd of evocative colors and imperfect lines to create images that are as unnerving as they are aesthetically pleasing." - Captain P's Art Review Journal</p>
+          <h4><a href = "find.html">Find a Show Near You</a></h4>
+      </div>
+      <!-- End of Sidebar Div-->
+
+      <div id="maincontent">
+        <h1>Recent Projects</h1>
+          <p>Most recently Marla has been working on several pieces regarding the environment and climate change, as well as the current political situation in our country.</p>
+          <p>She has also been dealing with a host of issues due to a brain injury she suffered in 2018, which has been a big inspiration for her art.</p>
+        <h2>Venues</h2>
+          <p>Her art was recently seen in conjunction with a production of Shakespeare's 'The Tempest' in which she is playing Ariel</p>
+          <canvas id='canvas' width="400" height="250" style="margin-left:200px; margin-top:50px;"></canvas>
+          <p>Above is a shape I made with canvas.</p>
+      </div>
+            
+      <!-- End of Main Div-->
+    </div>
+    <!-- End of Innerwrap Div-->
+
+    <div id="footer"> 
+      <p>Copyright MarlaJane Caram 2020</p>
+      <p>Registration on or use of this site constitutes acceptance of our <a href="https://policies.google.com/terms?hl=en-US"> user agreement </a> and <a href="https://policies.google.com/privacy?hl=en-US">Privacy Policy.</a></p>
+    </div>
+    <!-- End of Footer Div-->
+
+  </div>
+  <!-- End of the Wrap Div-->
+
+</body>
+</html>

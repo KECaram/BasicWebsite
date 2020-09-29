@@ -1,0 +1,123 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+
+  <title>Locator</title>
+
+  <link href="reset.css" rel="stylesheet" type="text/css" />
+  <link href="base.css" rel="stylesheet" type="text/css" />
+  <! -- [if IE]>
+  <link href="iefixes.css" rel="stylesheet" type="text/css">
+  <! -- [endif]>
+
+    <style type="text/css">
+    </style>
+</head>
+<body id="find" onload="initialize()" onunload="GUnload()">
+
+	<!-- This is the beginning of the wrap div. This div will nest all of the other page elements and has a fixed-width of 960 pixels.-->
+	<div id="wrap">
+		<div id="masthead">
+    <img src="images/Headshot.jpg" width="120" height="120" alt="Anime" />      
+    <h1>MARLALA JANE ARTS</h1>
+		</div>
+		<div id="mainnav">     
+      <ul>	
+        <li><a class="nav-home" href="index.html">Home</a></li>                      			 
+        <li><a class="nav-about" href="about.html">About</a></li>              		
+        <li><a class="nav-gallery" href="gallery.html">Gallery</a></li>                                          
+        <li><a class="nav-news" href="news.html">News</a></li>
+        <li><a class="nav-buy" href="buy.html">Buy</a></li>
+        <li><a class="nav-find" href="find.html">Near You</a></li>            			
+        <li><a class="nav-contact" href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+		<div id="innerwrap">
+        <section id="wrapper">
+          <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+          <article>
+            <p>Finding your location: <span id="status">checking...</span></p>
+          </article>
+      
+          <script type="text/javascript">
+      
+            function initialize () {
+              if(navigator.geolocation){
+                navigator.geolocation.getCurrentPosition(show_location, error_handler);
+              }
+              else {
+                alert('Geolocation not supported in this browser.');
+              }
+            }
+      
+            function show_location (position) {
+              var s = document.querySelector('#status');
+              s.innerHTML = "Look at the Shows We Found Near You!";
+            // Get the user's latitude and longitude
+            var latlng = new google.maps.LatLng
+            (
+              position.coords.latitude,
+              position.coords.longitude
+            );
+            // Create a container for the map
+            var mapcanvas = document.createElement('div');
+            mapcanvas.id = 'mapcanvas';
+            mapcanvas.style.height = '480px';
+            mapcanvas.style.width = '960px';
+            document.querySelector('article').appendChild(mapcanvas);        
+      
+            var myOptions = {
+              center: latlng,
+              zoom: 15,
+              mapTypeId: google.maps.MapTypeId.ROADMAP
+            };
+      
+            var map = new
+            google.maps.Map(document.getElementById("mapcanvas"), myOptions);
+      
+            var marker = new google.maps.Marker({
+              position: latlng,
+              map: map,
+              title:"You are here!"
+            });
+      
+            // Create a blue marker for the stores
+            var iconFile = 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png';
+            // Add some store markers to the map (random locations for our example)
+            var southWest = new google.maps.LatLng(latlng.lat() - .10, latlng.lng() - .10);
+            var northEast = new google.maps.LatLng(latlng.lat() + .10, latlng.lng() + .10);
+            var bounds = new google.maps.LatLngBounds(southWest, northEast);
+            var lngSpan = northEast.lng() - southWest.lng();
+            var latSpan = northEast.lat() - southWest.lat();
+            map.fitBounds(bounds);
+            for (var i = 0; i < 10; i++) {
+              var point = new google.maps.LatLng(
+                southWest.lat() + latSpan * Math.random(),
+                southWest.lng() + lngSpan * Math.random());
+              var storeMarker = new google.maps.Marker({
+                position: point,
+                map: map,
+                title: "store #" + i
+              });
+              storeMarker.setIcon(iconFile)
+            }
+          }
+      
+          function error_handler(msg) {
+            var s = document.querySelector('#status');
+            s.innerHTML = msg + "failed.";
+          }
+        </script>
+		</div>
+		<div id="footer"> 
+      <p>Copyright MarlaJane Caram 2020</p>
+      <p>Registration on or use of this site constitutes acceptance of our <a href="https://policies.google.com/terms?hl=en-US"> user agreement </a> and <a href="https://policies.google.com/privacy?hl=en-US">Privacy Policy.</a></p>
+    </div>
+	</div>
+	<!-- End of the Wrap Div-->
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+
+  <title>About Marla</title>
+
+  <link href="reset.css" rel="stylesheet" type="text/css" />
+  <link href="base.css" rel="stylesheet" type="text/css" />
+  <! -- [if IE]>
+  <link href="iefixes.css" rel="stylesheet" type="text/css">
+  <! -- [endif]>
+
+  <script type="text/javascript" src="jquery.js"></script>
+	<script>
+		$(document).ready(function() 
+		{
+			$('#MissionStatement').hide();
+			$('a#triggerMissionStatement').click(function()
+			{
+				$('#MissionStatement').slideToggle(500);
+				e.preventDefault()
+			});
+		});
+  </script>
+
+  <style type="text/css">
+    	#MissionStatement{
+			width:450px;
+			border:2px #000 solid;
+		  }
+  </style>
+
+</head>
+
+<body id="about">
+
+  <div id="wrap">
+
+    <div id="masthead">
+        <img src="images/Headshot.jpg" width="120" height="120" alt="Anime" />      
+        <h1>MARLALA JANE ARTS</h1>
+    </div>
+    <!-- End of Masthead Div-->
+
+    <div id="mainnav">     
+      <ul>	
+        <li><a class="nav-home" href="index.html">Home</a></li>                      			 
+        <li><a class="nav-about" href="about.html">About</a></li>              		
+        <li><a class="nav-gallery" href="gallery.html">Gallery</a></li>                                          
+        <li><a class="nav-news" href="news.html">News</a></li>
+        <li><a class="nav-buy" href="buy.html">Buy</a></li>
+        <li><a class="nav-find" href="find.html">Near You</a></li>            			
+        <li><a class="nav-contact" href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+    <!-- End of mainnav Div-->
+
+    <div id="innerwrap">
+
+      <div id="sidebar">
+        <img src="images/Self.jpg" width="180" height="180" alt="Anime" />
+        <h2>What's New?</h2>
+        <h3>Upcoming Projects</h3>
+          <p>See upcoming projects and what's going on with Marla <a href = "news.html">here</a>!</p>
+          <p>Visit her <a href="https://www.instagram.com/marlalalajanearts/?hl=en">instagram</a> page for daily updates!</p>
+        <h3>Reviews</h3>
+          <p>"Fusing mundane objects with the abstract and surreal, MarlaJane uses a belnd of evocative colors and imperfect lines to create images that are as unnerving as they are aesthetically pleasing." - Captain P's Art Review Journal</p>
+        <h4><a href = "find.html">Find a Show Near You</a></h4>
+      </div>
+
+      <div id="maincontent">
+        <h1> About the Artist </h1>
+          <p>My name is Keith Caram, and I guess this is a fan website. Marla is my sister and this is a website that I am making that is dedicated to her art and performances. 
+            She is kind and passionate and a really great sister, so this is a little thing that I made to show my pride in her work. Not all of the information on the site is true, 
+            but all of the art featured on this website is her art. She has been an artist as long as I can remember and has always made the most amazing art, especailly when featuring
+            her family and cats. She recently moved back to MA from NYC and I miss her dearly. I hope you share in some of the joy that her art has given me!
+          </p>
+          <h1> <a id="triggerMissionStatement" href="#">Read Marla's Artist Mission Statement(click me!)</a></h1>
+          <div id="MissionStatement">
+            <h1>Marla's mission statement is probably something along the lines of:</h1>
+            <p>Diversity, Empathy, and Inclusion always create the best art.</p>
+            <p>Don't make something if it isn't socially relevent and full of love.</p>
+            <p>The above is definitely speculation because I am her brother</p>
+            <p>and I have no idea what's in her heart of hearts.</p>
+          </div>
+      </div>
+      <!-- End of Main Div-->
+
+    </div>
+    <!-- End of Innerwrap Div-->
+
+    <div id="footer"> 
+      <p>Copyright MarlaJane Caram 2020</p>
+      <p>Registration on or use of this site constitutes acceptance of our <a href="https://policies.google.com/terms?hl=en-US"> user agreement </a> and <a href="https://policies.google.com/privacy?hl=en-US">Privacy Policy.</a></p>
+    </div>
+    <!-- End of Footer Div-->
+
+  </div>
+  <!-- End of the Wrap Div-->
+
+</body>
+</html>
